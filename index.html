@@ -1,66 +1,71 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>История викторианской Англии</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>История Викторианской Англии</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+
 </head>
+
 <body>
+    <header class="header">
+        <h1 class="header__title">История Викторианской Англии</h1>
+        <img class="header__image" src="images/glass.png" alt="лупа" width="40">
+        <img class="header__image" src="images/menu.png" alt="боковое меню" width="40">
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item"><a class="header__link" href="index.html">Главная</a> </a></li>
+                <li class="header__item"><a class="header__link" href="#section1">Регистрация/Войти</a></li>
+                <li class="header__item"><a class="header__link" href="#section2">Избранные статьи </a></li>
+                <li class="header__item"><a class="header__link" href="history.html">История</a></li>
+                <li class="header__item"><a class="header__link" href="#section4">Аристократия</a></li>
+                <li class="header__item"><a class="header__link" href="#section5">Промышленное развитие</a></li>
+                <li class="header__item"><a class="header__link" href="#section6">Рабочий класс</a></li>
+                <li class="header__item"><a class="header__link" href="#section7">Семья</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <img class="welcome__image" src="images/base_v.webp" alt="основная" width="790">
+        </section>
+        <section class="articles">
+            <h2 class="articles__title">Новые публикации и издания</h2>
+            <ul class="articles__list">
+                <li class="articles__document">
+                    <a class="articles__link" href="#">Сомова Е.В.,Маслова М.А. Жанр
+                        "истории" в английской литературе XIX века </a>
+                </li>
+                <li class="articles__document">
+                    <a class="articles__link" href="#">Брискина А.А.Концепция истории в
+                        викторианскую эпоху</a>
+                </li>
+                <li class="articles__document">
+                    <a class="articles__link" href="#">Кычанова Л.С., Оболонкова М.А.Викторианский "home" как отражение
+                        британского
+                        менталитета</a>
+                </li>
+            </ul>
+        </section>
 
-<header>
-    <h1>История викторианской Англии</h1>
-    <nav>
-        <ul>
-            <li><a href="#about">О викторианской эпохе</a></li>
-            <li><a href="#events">События</a></li>
-            <li><a href="#contact">Контакты</a></li>
-        </ul>
-    </nav>
-    <img src="images/victorian-era.jpg" alt="Викторианская эпоха" width="800" height="400">
-</header>
-
-<main>
-    <section id="about">
-        <h2>О викторианской эпохе</h2>
-        <p>Викторианская эпоха охватывает период правления королевы Виктории с 1837 по 1901 год...</p>
-        <!-- Дополнительный контент -->
-    </section>
-
-    <section id="events">
-        <h2>Ключевые события</h2>
-        <ul>
-            <li>1837 - Восшествие Виктории на трон</li>
-            <li>1851 - Великая выставка в Кристал Пэлас</li>
-            <li>1888 - Убийства Джек-потрошитель</li>
-            <!-- Дополнительные события -->
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Контактная форма</h2>
-        <form action="https://example.com/submit" method="POST">
-            <div>
-                <label for="name">Имя:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-                <label for="email">Электронная почта:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-                <label for="message">Сообщение:</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit">Отправить</button>
-        </form>
-    </section>
-</main>
-
-<footer id="footer">
-    <h4>Контакты</h4>
-    <p>Электронная почта: <a href="mailto:info@victorianhistory.com">info@victorianhistory.com</a></p>
-</footer>
-
+        <section class="images-view">
+            <img class="images-view__art" src="images/1875.webp" alt="1875" width="450">
+            <img class="images-view__art" src="images/caricature.jpg" alt="карикатуры" width="450">
+            <img class="images-view__art" src="images/city.webp" alt="город" width="450">
+        </section>
+        <aside class="description">
+            <h3 class="description__title">Общее описание викторианской эпохи Англии </h3>
+            <p class="description__text"> Это основной контент страницы</p>
+        </aside>
+    </main>
+    <footer class="footer">
+        <p class="footer__item"><a class="footer__link"> Свяжитесь с нами:</p>
+        <p class="footer__item"><a class="footer__link"> </a>> Чат с поддержкой:</p>
+        <p class="footer__item"><a class="footer__link"> </a>>&copy; 2025 История Викторианской Англии </p>
+    </footer>
 </body>
+
 </html>

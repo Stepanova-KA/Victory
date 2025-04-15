@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Victorian";
-    src: url("../fonts/victorian-gothic-two.woff2") format('woff2');
-    font-weight: 500;
+    src: url("../fonts/montserrat-black-italic.woff") format('woff2');
+    font-weight: 900;
     font-style: normal;
     font-display: swap;
     }
@@ -13,3 +13,4 @@
         font-style: normal;
         font-display: swap;
         }   
+        

@@ -12,3 +12,4 @@
 - 25.10. - создан эскиз макета, учитывая все предыдущие описания
 ## Макет
 Ссылка на макет Figma: (https://www.figma.com/design/YlwngOiKQGSep0jDfyAQ0V/tg%3A-%40maket_figma-Турагентство-премиум)
+

@@ -1,0 +1,46 @@
+
+'use strict'
+document.addEventListener("DOMContentLoaded", () => {
+    
+
+    /* 1. Появление возможности скачивания файла статьи */
+
+    const articles__link = document.querySelector('.articles__link');      
+
+    if (articles__link) {                                       
+        console.log('Мышка наведена на название статьи, появляется кнопка скачивания');
+
+        /* 
+        *   Алгоритм
+        *
+        *   1. Начало.
+        *   2. Получаем элемент (текст).
+        *   3. Проверка условия (навешиваем слушатель событий наведение мыши на название статьи).
+        *       3.1. Да: Получаем возможность скачивания PDF-файла(кнопка скачивания).
+        *       3.2. Нет: Конец
+        *   4. Конец
+        * 
+        *   Блок-схема: /images/block-schema.png
+        */
+
+
+
+
+        const heightHeader = header.offsetHeight;           // определяем высоту блока, включая внутренние отступы
+
+        document.addEventListener('scroll', () => {         // навешиваем слушатель событий на scroll страницы и ожидаем ее прокрутку
+
+            console.log('Страница скролится');
+
+            let scrollPageY = this.scrollY;                 // получаем значение насколько прокрутили страницу
+
+            if (scrollPageY > heightHeader) {               // условие: если расстояние от верха страницы больше высоты элемента
+                header.classList.add('header--scroll')      // устанавливаем класс модификатора на элемент
+            } else {
+                header.classList.remove('header--scroll')   // удаляем класс модификатора у элемента
+            }
+
+        })
+
+    }
+});

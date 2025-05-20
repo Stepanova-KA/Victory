@@ -36,5 +36,18 @@ overflow: hidden;
     margin-right: auto;
 }
 
-    
-    
+    .intensive {
+    margin-top: 40px; 
+    display: flex;
+    justify-content: space-between; 
+    }
+.intensive__item {
+    width: 300px;
+    position: relative;
+    }
+.intensive__description {
+    margin-top: 15px; 
+    color: #4a4a4a; 
+    text-align: center; 
+    font-size: 16px; 
+    }

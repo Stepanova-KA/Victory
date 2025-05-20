@@ -1,0 +1,39 @@
+.welcome__image{
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 2px 1px rgba(50, 50, 51, 0.2);
+}
+  .images-view{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }     
+  .images-view__art{
+    border-radius: 15px;
+    box-shadow: 5px 5px 2px 1px rgba(50, 50, 51, 0.2);
+  }
+  .map{
+      text-align: center;
+    }
+    .map__img{
+      margin: 0 auto;
+
+  }
+  .chronology__text{
+    text-align: justify;
+  }
+
+
+  .articles__document{
+    line-height: 30px;
+    height: 40px;
+border-radius: 15px;
+    box-shadow: 5px 5px 2px 1px rgba(50, 50, 51, 0.2);
+  } 
+  .articles__document:hover{
+    background-color: #e79869;
+  }
+  .articles__link{
+    text-decoration: none;
+    color: rgb(160, 7, 7);
+  }

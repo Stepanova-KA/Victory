@@ -50,4 +50,86 @@ overflow: hidden;
     color: #4a4a4a; 
     text-align: center; 
     font-size: 16px; 
+    position: absolute; 
+    width: 250px; 
+    background-color: #f79d9d; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, 50%);
+     }
+
+
+     body {
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 253, 253, 0.8); /* Полупрозрачный черный фон */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 50; 
+}
+
+.close-btn {
+    align-self: flex-end;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.intensive__img {
+    width: 200px; 
+    height: auto;
+}
+
+.header__image menu {
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    height: 100px; 
+    padding-left: 20px; 
+    float: left;
+}
+
+.header__image {
+    width: 80px; 
+    height: 80px; 
+    cursor: pointer; 
+    font-size: 10px; 
+}
+ .victorianism {
+    margin-top: 40px; 
+    display: flex;
+    justify-content: space-between; 
     }
+.victorianism__item {
+    width: 300px;
+    position: relative;
+    }
+
+    .victorianism {
+  width: 1350px; /*задаемширинуслайдера с карточками */
+  margin-top: 60px;/*отступсверху*/
+  display: flex;/*Используемflexbox для выравнивания карточек в строку*/
+  gap: 40px;/*промежуток между карточками */
+overflow: hidden;/*если содержимое выходит за пределы карточки, то скрытие лишнего */
+}
+.victorisnism__img {
+ min-width: 360px;/*устанавливаем минимальную ширину для каждого изображения*/
+
+}
+.victorianism__item {
+  width: 360px;/*устанавливаем ширину для каждого элемента*/
+  transition: 0.3sease;/* плавное изменение отображения длительностью 0.3 секунды*/
+  }

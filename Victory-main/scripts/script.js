@@ -141,3 +141,53 @@ intensiveImg.forEach((item, index) => {
     });
 });
 });
+
+'use strict';
+
+document.addEventListener('DOMContentLoaded', () => {
+    const intensiveImg = document.querySelectorAll('.intensive__img');
+    const intensiveText = document.querySelectorAll('.intensive__description');
+    
+    intensiveImg.forEach((item, index) => {
+        item.addEventListener('mouseenter', () => { 
+            item.style.opacity = 0.5;
+            intensiveText[index].removeAttribute('hidden');
+        });
+        
+        item.addEventListener('mouseleave', () => {
+            item.style.opacity = 1;
+            intensiveText[index].setAttribute('hidden', true);
+        });
+    });
+
+    // Обработчик для кнопки закрытия меню
+    const closeButton = document.querySelector('.close-btn');
+    const  menu = document.querySelector('.menu');
+
+    closeButton.addEventListener('click', () => {
+         menu.style.display = 'none'; // Скрыть меню
+    });
+
+    // Обработчик для иконки меню (если она добавлена)
+    const menuIcon = document.querySelector('.menu-icon');
+    
+    menuIcon.addEventListener('click', () => {
+        menu.style.display = 'flex'; // Показать меню
+    });
+     });
+     const victorianismContainer = document.querySelector(".victorianism");
+       if (victorianismContainer) {
+            const dataTitlevictorianism= [
+            "Королевская семья",
+            "Монеты",
+            "Вестминстерский дворец",
+            "Развитие общества",
+            "Архитектура",
+            "Джентльмен",
+        ];
+          const Titlevictorianism
+=victorianismContainer.querySelectorAll(".victorianism__subtitle");
+      Titlevictorianism.forEach((item, index) => {
+              item.textContent = dataTitlevictorianism[index];
+           });
+    }

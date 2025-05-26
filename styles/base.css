@@ -1,0 +1,68 @@
+:root {
+    --color-primary: #5A473D; /* Темно-коричневый, земляной */
+    --color-secondary: #8B7A6C; /* Светло-коричневый */
+    --color-accent: #B0A391; /* Бежевый, слоновая кость */
+    --color-dark: #2C2727; /* Почти черный */
+    --color-light: #F2F1ED; /* Очень светлый бежевый */
+    --color-gold: #C09D5E; /* Старое золото */
+    --color-burgundy: #6D2F3F; /* Бордовый */
+    --color-emerald: #3A664E; /* Изумрудный */
+    --color-deep-blue: #3A4750; /* Глубокий синий/серый */
+    --color-navy: #1F2833; /* Очень темный синий для фона */
+
+    --font-heading: 'Cinzel Decorative', serif;
+    --font-body: 'Merriweather', serif;
+    --font-decorative: 'Old Standard TT', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Плавная прокрутка */
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    line-height: 1.6;
+    overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку из-за анимаций */
+}
+
+/* Вспомогательные классы */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-heading {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    color: var(--color-burgundy);
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-gold);
+    border-radius: 2px;
+}

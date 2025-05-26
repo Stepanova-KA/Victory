@@ -1,0 +1,70 @@
+/* Хедер и навигация */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(44, 39, 39, 0.95); /* Полупрозрачный темный фон */
+    color: var(--color-light);
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: background-color 0.4s ease;
+}
+header.scrolled {
+    background-color: rgba(44, 39, 39, 0.98);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8em;
+    color: var(--color-gold);
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.logo:hover {
+    color: var(--color-light);
+    transform: scale(1.05);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin-left: 30px;
+}
+.nav-links a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-family: var(--font-decorative);
+    font-size: 1.1em;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-gold);
+    transition: width 0.3s ease;
+}
+.nav-links a:hover {
+    color: var(--color-gold);
+    text-shadow: 0 0 10px rgba(192, 157, 94, 0.5);
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+

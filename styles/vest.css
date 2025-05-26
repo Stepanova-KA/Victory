@@ -1,0 +1,131 @@
+/* ======================================= */
+/* Секция: Тогда и Сейчас */
+/* ======================================= */
+#virtual-tour {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+
+.then-now-slider {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.then-now-slider .slider-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* --- ДОБАВЛЕНО/ИЗМЕНЕНО --- */
+    background-color: var(--color-dark); /* Цвет фона для пустых полей */
+    /* --- КОНЕЦ ДОБАВЛЕНО/ИЗМЕНЕНО --- */
+}
+
+.then-now-slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* <-- ИЗМЕНЕНО! Теперь вся фотография будет видна */
+    object-position: center;
+    transition: clip-path 0.1s linear;
+}
+
+.then-now-slider .img-now {
+    clip-path: inset(0 0 0 50%);
+    z-index: 2;
+}
+
+.then-now-slider .img-then {
+    z-index: 1;
+}
+
+/* Остальные стили для ползунка, ручки и линии остаются без изменений */
+.then-now-slider .slider-control {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 3;
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+.then-now-slider .slider-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: ew-resize;
+    box-shadow: 0 0 0 5px rgba(var(--color-primary-rgb, 90, 71, 61), 0.3);
+    z-index: 4;
+    pointer-events: none;
+}
+
+.then-now-slider .slider-handle i {
+    color: var(--color-light);
+    font-size: 1.2em;
+}
+
+.then-now-slider .slider-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: var(--color-gold);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.then-now-slider .slider-caption {
+    margin-top: 25px;
+    font-style: italic;
+    color: var(--color-secondary);
+    font-size: 1.05em;
+}
+
+/* Адаптивность остается той же */
+@media (max-width: 992px) {
+    .then-now-slider .slider-wrapper {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .then-now-slider .slider-wrapper {
+        height: 300px;
+    }
+    .then-now-slider .slider-handle {
+        width: 30px;
+        height: 30px;
+    }
+    .then-now-slider .slider-handle i {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .then-now-slider .slider-wrapper {
+        height: 250px;
+    }
+}

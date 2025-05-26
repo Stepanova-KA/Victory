@@ -1,0 +1,27 @@
+/* Футер */
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-accent);
+    padding: 40px 0;
+    text-align: center;
+    font-family: var(--font-decorative);
+    border-top: 5px double var(--color-gold);
+    position: relative;
+    z-index: 10;
+}
+footer p {
+    margin-bottom: 10px;
+}
+.social-links {
+    margin-top: 20px;
+}
+.social-links a {
+    color: var(--color-gold);
+    font-size: 1.6em;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-links a:hover {
+    color: var(--color-light);
+    transform: scale(1.2) rotate(5deg);
+}

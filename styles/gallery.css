@@ -1,0 +1,119 @@
+/* --- Секция "Галерея Эпохи" --- */
+#gallery {
+    background-color: var(--color-dark); /* Темный, глубокий фон */
+    color: var(--color-light);
+    border-top: 5px double var(--color-gold);
+    border-bottom: 5px double var(--color-gold);
+    background-image: url('https://www.transparenttextures.com/patterns/dark-fish-skin.png'); /* Текстура для глубины */
+    background-blend-mode: overlay;
+    padding: 80px 0 100px; /* Увеличим padding для секции */
+}
+#gallery .section-heading {
+    color: var(--color-gold);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+#gallery p { /* Стиль для параграфа под заголовком секции */
+    color: var(--color-accent);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Увеличим расстояние между карточками */
+    margin-top: 50px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5); /* Более выраженная тень */
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(192, 157, 94, 0.3); /* Тонкая золотая рамка */
+}
+.gallery-item:hover {
+    transform: translateY(-10px) scale(1.02); /* Более выраженный подъем */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6); /* Более сильная тень при наведении */
+    border-color: var(--color-gold); /* Рамка становится ярче */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(70%) sepia(20%); /* Винтажный эффект по умолчанию */
+    transition: filter 0.6s ease, transform 0.4s ease;
+}
+.gallery-item:hover img {
+    filter: grayscale(0%) sepia(0%); /* При наведении - полные цвета */
+    transform: scale(1.05); /* Легкий зум при наведении */
+}
+
+.gallery-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0) 100%); /* Более плотный градиент */
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Контент прижат к низу */
+    padding: 20px;
+    opacity: 0; /* Изначально скрыт */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Анимируем не только opacity */
+    transform: translateY(20px); /* Начинается немного ниже */
+    font-family: var(--font-decorative); /* Применяем декоративный шрифт */
+    text-align: left; /* Выравнивание текста внутри overlay */
+}
+.gallery-item:hover .gallery-content {
+    opacity: 1; /* Появляется при наведении */
+    transform: translateY(0); /* Поднимается на место */
+}
+
+.gallery-content h3 {
+    font-family: var(--font-heading); /* Декоративный шрифт для заголовка */
+    font-size: 1.6em; /* Увеличим размер */
+    margin-bottom: 8px;
+    color: var(--color-gold); /* Золотой цвет */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    text-align: left; /* Выравнивание текста */
+}
+.gallery-content p {
+    font-size: 1em;
+    line-height: 1.4;
+    margin-bottom: 15px; /* Отступ перед кнопкой */
+    color: var(--color-accent);
+    text-align: left; /* Выравнивание текста */
+}
+
+.gallery-content .view-details-btn {
+    display: inline-block; /* Или block, если нужен по всей ширине */
+    background-color: var(--color-burgundy);
+    color: var(--color-light);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--font-decorative);
+    font-size: 0.95em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    margin-top: auto; /* Прижимает кнопку к низу overlay, если используется flex-end */
+    align-self: flex-start; /* Выравнивает кнопку по левому краю внутри flex-контейнера */
+}
+.gallery-content .view-details-btn:hover {
+    background-color: var(--color-gold);
+    color: var(--color-dark);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    transform: translateY(-2px);
+}
+.gallery-content .view-details-btn i {
+    margin-left: 8px;
+}

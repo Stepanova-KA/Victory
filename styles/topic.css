@@ -1,0 +1,215 @@
+:root {
+    --color-primary: #5A473D; /* Темно-коричневый, земляной */
+    --color-primary-rgb: 90, 71, 61; /* Добавлено */
+    --color-secondary: #8B7A6C; /* Светло-коричневый */
+    --color-secondary-rgb: 139, 122, 108; /* Добавлено */
+    --color-accent: #B0A391; /* Бежевый, слоновая кость */
+    --color-dark: #2C2727; /* Почти черный */
+    --color-dark-rgb: 44, 39, 39; /* Добавлено для rgba */
+    --color-light: #F2F1ED; /* Очень светлый бежевый */
+    --color-gold: #C09D5E; /* Старое золото */
+    --color-gold-rgb: 192, 157, 94; /* Добавлено для rgba */
+    --color-burgundy: #6D2F3F; /* Бордовый */
+    --color-emerald: #3A664E; /* Изумрудный */
+    --color-deep-blue: #3A4750; /* Глубокий синий/серый */
+    --color-navy: #1F2833; /* Очень темный синий для фона */
+
+    --font-heading: 'Cinzel Decorative', serif;
+    --font-body: 'Merriweather', serif;
+    --font-decorative: 'Old Standard TT', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* ======================================= */
+/* Стили для Swiper в секции тем */
+/* ======================================= */
+.topic-grid.swiper-container {
+    width: 100%;
+    min-height: 550px; /* Увеличим min-height, чтобы вместить карточки и стрелки */
+    margin-top: 50px;
+    padding-bottom: 60px; /* Отступ для пагинации */
+    position: relative; /* !!! ВАЖНО: Делает этот контейнер базой для позиционирования стрелок */
+    /* overflow: hidden;  <-- МОЖЕТ ОБРЕЗАТЬ СТРЕЛКИ, УДАЛИТЬ ИЛИ ПОДОБРАТЬ ПОЗИЦИЮ СТРЕЛОК */
+}
+
+/* Стилизация пагинации (точек) */
+.swiper-pagination-bullet {
+    background: var(--color-secondary);
+    opacity: 0.7;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--color-gold); /* Активная точка золотого цвета */
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Стилизация кнопок навигации */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--color-burgundy); /* Цвет стрелок */
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.3)); /* Тень для объема */
+    transition: color 0.3s ease, transform 0.3s ease;
+    width: 50px; /* Увеличим ширину */
+    height: 50px; /* Увеличим высоту */
+    top: 50%; /* Центрируем вертикально */
+    transform: translateY(-50%); /* Точное вертикальное центрирование */
+    font-size: 1.8em; /* Размер иконки */
+    /* Важно: Позиционирование стрелок Swiper по умолчанию уже абсолютное */
+    /* Убедимся, что они не за пределами видимой области при overflow: hidden */
+    /* Можно добавить padding на контейнер .swiper-container если стрелки обрезаются */
+}
+
+/* Уточнение стилей для псевдоэлементов Font Awesome внутри Swiper кнопок */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-family: 'Font Awesome 5 Free' !important; /* Указываем Font Awesome для псевдоэлементов */
+    font-weight: 900 !important; /* Для Solid иконок Font Awesome */
+    font-size: 1.8em !important; /* Обеспечиваем размер иконки */
+    color: var(--color-burgundy) !important; /* Обеспечиваем цвет */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: var(--color-emerald); /* Цвет при наведении */
+    transform: translateY(-50%) scale(1.1); /* Сохраняем центрирование при масштабировании */
+}
+
+/* Отступы от края контейнера, чтобы стрелки были видны */
+.swiper-button-prev {
+    left: 0px; /* Сдвигаем влево */
+}
+.swiper-button-next {
+    right: 0px; /* Сдвигаем вправо */
+}
+
+/* Ваши существующие стили для topic-card */
+.topic-card {
+    width: 100%; /* Swiper сам устанавливает ширину .swiper-slide */
+    height: 550px; /* !!! ВАЖНО: Задайте фиксированную высоту для карточки, чтобы Swiper мог вычислить высоту карусели */
+    /* Остальные ваши стили */
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid var(--color-secondary);
+    cursor: pointer;
+    position: relative;
+    /* Убедитесь, что здесь нет фиксированной ширины, которая конфликтовала бы с Swiper */
+}
+.topic-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+.topic-card:hover::before {
+    opacity: 1;
+}
+.topic-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.4);
+}
+.topic-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    filter: grayscale(80%) sepia(30%) brightness(0.8); /* Более сильный античный эффект */
+    transition: filter 0.6s ease;
+    z-index: 0;
+}
+.topic-card:hover img {
+    filter: grayscale(0%) sepia(0%) brightness(1); /* Полный цвет при наведении */
+}
+.topic-card-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Для z-index над псевдоэлементом */
+    z-index: 2;
+}
+.topic-card-content h3 {
+    font-family: var(--font-decorative);
+    font-size: 1.9em;
+    color: var(--color-gold);
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.topic-card-content p {
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    text-align: justify;
+    flex-grow: 1;
+    color: var(--color-accent);
+}
+.topic-card-content .read-more {
+    display: inline-block;
+    background-color: var(--color-burgundy);
+    color: var(--color-light);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-family: var(--font-decorative);
+    font-size: 1em;
+    text-align: center;
+    align-self: flex-end;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-burgundy);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+.topic-card-content .read-more:hover {
+    background-color: var(--color-emerald);
+    transform: scale(1.07);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+}
+
+/* Адаптивность для Swiper (используются breakpoints в JS) */
+@media (max-width: 768px) {
+    .topic-grid.swiper-container {
+        padding-bottom: 40px;
+        min-height: 500px; /* Уменьшим на планшетах */
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: 50%; /* Центрирование */
+        transform: translateY(-50%); /* Центрирование */
+        font-size: 1.5em; /* Меньший размер стрелок */
+        width: 40px; /* Уменьшим размер кнопок */
+        height: 40px;
+    }
+}
+@media (max-width: 576px) {
+    /* Если на мобильных совсем мало места, можно спрятать стрелки */
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+    .topic-card {
+        height: auto; /* Позволяем карточке регулировать свою высоту */
+        min-height: 480px; /* Но задаем минимальную высоту */
+    }
+    .topic-grid.swiper-container {
+        min-height: 450px; /* Уменьшим на мобильных */
+    }
+}

@@ -1,0 +1,61 @@
+/* Секция "Об эпохе" */
+#about {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    border-top: 5px double var(--color-gold);
+    border-bottom: 5px double var(--color-gold);
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'); /* Тонкая текстура бумаги */
+    background-blend-mode: multiply;
+    padding: 100px 0;
+}
+#about .about-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+#about .about-text {
+    flex: 1;
+    font-size: 1.15em;
+    line-height: 1.8;
+    text-align: justify;
+    background-color: rgba(255,255,255,0.7); /* Слегка прозрачный фон для текстового блока */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+#about .about-text p:first-of-type::first-letter {
+    font-family: var(--font-heading);
+    font-size: 3.5em;
+    color: var(--color-burgundy);
+    float: left;
+    margin-right: 15px;
+    line-height: 1;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+#about .about-image {
+    flex: 0 0 450px;
+    height: 350px;
+    background-image: url('../images/epoha.jpg'); /* Викторианский портрет */
+    background-size: cover;
+    background-position: center;
+    border: 8px solid var(--color-dark);
+    box-shadow: 15px 15px 30px rgba(0,0,0,0.4);
+    position: relative;
+    transform: rotate(3deg); /* Тонкий наклон */
+    transition: transform 0.5s ease;
+}
+#about .about-image:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 20px 20px 40px rgba(0,0,0,0.5);
+}
+#about .about-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 3px dashed var(--color-gold);
+    pointer-events: none;
+    opacity: 0.7;
+}

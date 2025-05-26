@@ -3,67 +3,402 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>История Викторианской Англии</title>
-    <link rel="stylesheet" href="styles/normalize.css">
+    <title>Викторианская Англия: Портал в Прошлое</title>
+
+    <!-- Google Fonts: для винтажной и элегантной типографики -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Merriweather:ital,wght@0,300;0,400;0,700,1,300;1,400;1,700&family=Old+Standard+TT:ital,wght@0,400;0,700,1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome: для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    <!-- Ссылка на ваш отдельный CSS файл -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header class="header container">
-        <h1 class="header__title">История Викторианской Англии</h1>
-        <img class="header__image" src="images/glass.png" alt="лупа" width="80">
-        <img class="header__image" src="images/menu.png" alt="боковое меню" width="80">
-        <nav class="header__nav">
-            <ul class="header__list">
-                <li class="header__item"><a class="header__link" href="index.html">Главная</a> </a></li>
-                <li class="header__item"><a class="header__link" href="#section1">Регистрация/Войти</a></li>
-                <li class="header__item"><a class="header__link" href="#section2">Избранные статьи </a></li>
-                <li class="header__item"><a class="header__link" href="history.html">История</a></li>
-                <li class="header__item"><a class="header__link" href="#section4">Аристократия</a></li>
-                <li class="header__item"><a class="header__link" href="#section5">Промышленное развитие</a></li>
-                <li class="header__item"><a class="header__link" href="#section6">Рабочий класс</a></li>
-                <li class="header__item"><a class="header__link" href="#section7">Семья</a></li>
-            </ul>
-        </nav>
+
+
+
+    <!--  (Preloader) -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="spinner-sk-circle">
+              <div class="sk-circle1 sk-child"></div>
+              <div class="sk-circle2 sk-child"></div>
+              <div class="sk-circle3 sk-child"></div>
+              <div class="sk-circle4 sk-child"></div>
+              <div class="sk-circle5 sk-child"></div>
+              <div class="sk-circle6 sk-child"></div>
+              <div class="sk-circle7 sk-child"></div>
+              <div class="sk-circle8 sk-child"></div>
+              <div class="sk-circle9 sk-child"></div>
+              <div class="sk-circle10 sk-child"></div>
+              <div class="sk-circle11 sk-child"></div>
+              <div class="sk-circle12 sk-child"></div>
+            </div>
+            <div class="loading-text">Открываем портал в прошлое...</div>
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Викторианская Эпоха</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero">Главная</a></li>
+                    <li><a href="#about">Об Эпохе</a></li>
+                    <li><a href="#topics">Темы</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#figures">Фигуры</a></li>
+                    <li><a href="#virtual-tour">Тогда и сейчас</a></li>
+                    <li><a href="#resources">Ресурсы</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main class= "main container">
-        <section class="welcome">
-            <img class="welcome__image" src="images/base_v.webp" alt="основная" width="790">
-        </section>
-        <section class="articles">
-            <h2 class="articles__title">Новые публикации и издания</h2>
-            <ul class="articles__list">
-                <li class="articles__document">
-                    <a class="articles__link" href="#">Сомова Е.В.,Маслова М.А. Жанр
-                        "истории" в английской литературе XIX века </a>
-                </li>
-                <li class="articles__document">
-                    <a class="articles__link" href="#">Брискина А.А.Концепция истории в
-                        викторианскую эпоху</a>
-                </li>
-                <li class="articles__document">
-                    <a class="articles__link" href="#">Кычанова Л.С., Оболонкова М.А.Викторианский "home" как отражение
-                        британского
-                        менталитета</a>
-                </li>
-            </ul>
+
+
+
+
+    <main>
+        <!-- НОВАЯ Секция HERO: Глубокое погружение в атмосферу -->
+        <section id="hero">
+            <div class="hero-background-image"></div>
+            <div class="background-overlay"></div>
+            <div id="particles-js" class="particles-overlay"></div>
+
+            <div class="hero-content-wrapper"> <!-- Обертка для централизации и параллакса -->
+                <div class="hero-content">
+                    <h1 class="elegant-title"><span id="typed-text"></span></h1>
+                    <p class="elegant-subtitle">Погрузитесь в золотой век британской истории, полный инноваций, социальных изменений и культурного расцвета.</p>
+                    <a href="#about" class="btn-discover">Исследовать Эпоху <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-indicator">
+                <span>Прокрутите вниз</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </section>
 
-        <section class="images-view">
-            <img class="images-view__art" src="images/1875.webp" alt="1875" width="450">
-            <img class="images-view__art" src="images/caricature.jpg" alt="карикатуры" width="450">
-            <img class="images-view__art" src="images/city.webp" alt="город" width="450">
+        <!-- Остальные секции остаются без изменений -->
+        <section id="about">
+            <div class="container about-content">
+                <div class="about-text">
+                    <h2 class="section-heading">Что такое Викторианская Эпоха?</h2>
+                    <p>Викторианская эпоха, длившаяся с 1837 по 1901 год под правлением королевы Виктории, была периодом беспрецедентного роста и трансформации Британской империи. Это было время промышленной революции, научных открытий, колониальной экспансии и значительных социальных реформ, которые заложили основы современного мира.</p>
+                    <p>Этот период отмечен расцветом литературы, искусства и архитектуры, а также формированием строгих социальных норм и быстрым развитием городской инфраструктуры. Изучение викторианской эпохи позволяет глубоко понять не только прошлое Британии, но и глобальные процессы, которые сформировали XX век.</p>
+                </div>
+                <div class="about-image"></div>
+            </div>
         </section>
-        <aside class="description">
-            <h3 class="description__title">Общее описание викторианской эпохи Англии </h3>
-            <p class="description__text"> Это основной контент страницы</p>
-        </aside>
+
+           <section id="topics">
+            <div class="container text-center">
+                <h2 class="section-heading">Ключевые Темы Эпохи</h2>
+                <div class="topic-grid swiper-container"> <!-- Обертка для Swiper -->
+                    <div class="swiper-wrapper">
+                    </div>
+
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- Add Navigation (кнопки вперед/назад) -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+                <!-- Секция "Галерея Эпохи"  -->
+        <section id="gallery">
+            <div class="container text-center">
+                <h2 class="section-heading">Галерея Эпохи</h2>
+                <p style="color: var(--color-accent); margin-bottom: 40px; font-size: 1.1em;">Визуальное путешествие по викторианской Англии: от повседневной жизни до грандиозных событий.</p>
+
+                <div class="gallery-grid">
+                    <!-- Gallery Item 1 -->
+                    <div class="gallery-item" data-src="images/street.jpg" data-caption="Уличная сцена в Викторианском Лондоне, конец XIX века. Улица полна омнибусов, прохожих и уличных торговцев, демонстрируя бурную жизнь столицы.">
+                        <img src="images/street.jpg" alt="Уличная сцена в Викторианском Лондоне">
+                        <div class="gallery-content">
+                            <h3>Уличная Жизнь</h3>
+                            <p>Суета Лондона: омнибусы, прохожие, торговцы. Окунитесь в повседневность викторианской столицы.</p>
+                            <span class="view-details-btn">Подробнее <i class="fas fa-search-plus"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 2 -->
+                    <div class="gallery-item" data-src="images/moda.jpg" data-caption="Изящная мода Викторианской эпохи: вечерние наряды и аксессуары. Женщины в кринолинах и турнюрах, мужчины в строгих сюртуках - символ эпохи.">
+                        <img src="images/moda.jpg" alt="Викторианская мода">
+                        <div class="gallery-content">
+                            <h3>Мода и Стиль</h3>
+                            <p>Элегантность и строгость в одежде того времени. От кринолинов до цилиндров.</p>
+                            <span class="view-details-btn">Подробнее <i class="fas fa-search-plus"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 3 -->
+                    <div class="gallery-item" data-src="images/arch.jpg" data-caption="Архитектурные шедевры: Вестминстерский дворец, символ Британской Империи и готического возрождения.">
+                        <img src="images/arch.jpg" alt="Викторианская архитектура">
+                        <div class="gallery-content">
+                            <h3>Величественная Архитектура</h3>
+                            <p>Вестминстерский дворец и другие постройки. Символы мощи и стиля.</p>
+                            <span class="view-details-btn">Подробнее <i class="fas fa-search-plus"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 4 -->
+                    <div class="gallery-item" data-src="images/portret.jpg" data-caption="Семейный портрет, отражающий ценности викторианского общества. Семейные ценности и строгие традиции были основой общества.">
+                        <img src="images/portret.jpg" alt="Семейный портрет">
+                        <div class="gallery-content">
+                            <h3>Портреты и Быт</h3>
+                            <p>Повседневная жизнь и семейные ценности, запечатленные на фотографиях.</p>
+                            <span class="view-details-btn">Подробнее <i class="fas fa-search-plus"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Знаковые Фигуры"  -->
+        <section id="figures">
+            <div class="container text-center">
+                <h2 class="section-heading">Знаковые Фигуры Эпохи</h2>
+                <p style="color: var(--color-dark); margin-bottom: 40px; font-size: 1.1em;">Познакомьтесь с людьми, которые формировали викторианский мир.</p>
+                <div class="figure-grid">
+                    <div class="figure-card" data-figure-title="Королева Виктория" data-figure-text="<p>Королева Виктория (1819–1901) — одна из самых долгоправящих монархов в истории Великобритании, чье правление (1837–1901) дало название целой эпохе. Она стала символом Британской империи и глубоко повлияла на политическую и социальную жизнь страны.</p><p>Ее правление ознаменовалось небывалым расцветом империи, промышленной революцией и значительными социальными изменениями. Она была не только главой государства, но и образцом семейных ценностей для многих своих подданных.</p>">
+                        <img src="images/victoria.jpg" alt="Королева Виктория">
+                        <h3>Королева Виктория</h3>
+                        <p>Монарх, чье правление дало название целой эпохе.</p>
+                    </div>
+                    <div class="figure-card" data-figure-title="Чарльз Диккенс" data-figure-text="<p>Чарльз Диккенс (1812–1870) — величайший английский писатель, чьи романы до сих пор читаются по всему миру. Его произведения, такие как «Оливер Твист», «Дэвид Копперфильд» и «Большие надежды», ярко изображали социальные проблемы викторианской Англии: бедность, несправедливость, ужасы рабочих домов и неравенство.</p><p>Диккенс был не только блестящим рассказчиком, но и социальным критиком, который своим творчеством привлекал внимание к нуждам обездоленных и призывал к реформам.</p>">
+                        <img src="images/charles.jpg" alt="Чарльз Диккенс">
+                        <h3>Чарльз Диккенс</h3>
+                        <p>Мастер слова, отразивший душу викторианского Лондона.</p>
+                    </div>
+                    <div class="figure-card" data-figure-title="Чарльз Дарвин" data-figure-text="<p>Чарльз Дарвин (1809–1882) — английский натуралист и биолог, наиболее известный своей теорией эволюции путем естественного отбора, представленной в его книге «Происхождение видов» (1859). Эта работа произвела революцию в науке и вызвала бурные дебаты в обществе, бросив вызов устоявшимся религиозным догмам.</p><p>Его идеи легли в основу современной биологии и оказали огромное влияние на философию, религию и общественную мысль викторианской эпохи и последующих столетий.</p>">
+                        <img src="images/darvin.jpg" alt="Чарльз Дарвин">
+                        <h3>Чарльз Дарвин</h3>
+                        <p>Отец теории эволюции, изменивший научный мир.</p>
+                    </div>
+                    <div class="figure-card" data-figure-title="Флоренс Найтингейл" data-figure-text="<p>Флоренс Найтингейл (1820–1910) — английская социальная реформаторша, статистик и основательница современного сестринского дела. Она получила известность во время Крымской войны, где ее усилия по улучшению санитарных условий значительно снизили смертность среди раненых солдат. Ее прозвище «Дама с лампой» стало символом самоотверженного ухода за больными.</p><p>После войны она продолжила борьбу за реформы в здравоохранении и создала первую профессиональную школу медсестер, заложив основы современной системы ухода за больными.</p>">
+                        <img src="images/llorence.jpg" alt="Флоренс Найтингейл">
+                        <h3>Флоренс Найтингейл</h3>
+                        <p>Пионер современного сестринского дела и реформатор.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Секция: "Тогда и Сейчас" -->
+        <section id="virtual-tour">
+            <div class="container text-center">
+                <h2 class="section-heading">Лондон: Тогда и Сейчас</h2>
+                <p style="color: var(--color-dark); margin-bottom: 40px; font-size: 1.1em;">Потяните ползунок, чтобы увидеть, как изменился вид на Вестминстерский дворец и Биг Бен с XIX века до наших дней.</p>
+
+                <div class="then-now-slider">
+                    <div class="slider-wrapper">
+                        <img src="images/unnamed.jpg" alt="Вестминстер тогда" class="img-then">
+                        <img src="images/vest.jpg" alt="Вестминстер сейчас" class="img-now">
+                        <input type="range" min="0" max="100" value="50" class="slider-control">
+                        <div class="slider-handle">
+                            <i class="fas fa-arrows-alt-h"></i>
+                        </div>
+                    </div>
+                    <p class="slider-caption">Величественный Вестминстерский дворец — неизменный символ Лондона.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Секция "Хронология" (для примера) -->
+        <section id="timeline">
+            <div class="container text-center">
+                <h2 class="section-heading">Хронология Ключевых Событий</h2>
+                <p style="color: var(--color-dark); margin-bottom: 40px; font-size: 1.1em;">Основные вехи викторианской эпохи, изменившие мир.</p>
+                <div class="timeline-content">
+                    <div class="timeline-event">
+                        <div class="timeline-date">1837</div>
+                        <div class="timeline-event-content">
+                            <h3>Восшествие на престол королевы Виктории</h3>
+                            <p>Молодая Виктория становится королевой, открывая новую главу в истории Британской империи. Начинается эпоха, названная в ее честь.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-date">1851</div>
+                        <div class="timeline-event-content">
+                            <h3>Великая выставка</h3>
+                            <p>В Лондоне открывается первая Всемирная выставка в Хрустальном дворце, демонстрирующая достижения промышленной революции и мировое могущество Британии.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-date">1859</div>
+                        <div class="timeline-event-content">
+                            <h3>Публикация «Происхождения видов»</h3>
+                            <p>Чарльз Дарвин публикует свою революционную работу, представляющую теорию эволюции и естественного отбора, что вызывает огромные научные и религиозные дебаты.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-date">1901</div>
+                        <div class="timeline-event-content">
+                            <h3>Смерть королевы Виктории</h3>
+                            <p>Королева Виктория уходит из жизни, завершая одну из самых продолжительных и влиятельных эпох в истории Великобритании.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Полезные Ресурсы"  -->
+        <section id="resources">
+            <div class="container text-center">
+                <h2 class="section-heading">Полезные Ресурсы для Глубокого Погружения</h2>
+                <p style="color: var(--color-accent); margin-bottom: 40px; font-size: 1.1em;">Откройте для себя богатство материалов, чтобы расширить свои знания.</p>
+                <div class="resource-grid">
+                    <div class="resource-item">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-book-atlas"></i> <!-- Новая иконка -->
+                        </div>
+                        <h3>Электронные Библиотеки</h3>
+                        <p>Доступ к обширным коллекциям оцифрованных книг, рукописей и научных журналов викторианского периода.</p>
+                        <a href="#" class="resource-link">Перейти к библиотеке</a>
+                    </div>
+                    <div class="resource-item">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-camera-retro"></i> <!-- Новая иконка -->
+                        </div>
+                        <h3>Фото- и Видеоархивы</h3>
+                        <p>Исследуйте редкие фотографии, исторические кадры и документальные записи из жизни XIX века.</p>
+                        <a href="#" class="resource-link">Смотреть архивы</a>
+                    </div>
+                    <div class="resource-item">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Интерактивные Карты</h3>
+                        <p>Путешествуйте по улицам викторианского Лондона и других городов с помощью детализированных карт.</p>
+                        <a href="#" class="resource-link">Изучить карты</a>
+                    </div>
+                    <div class="resource-item">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-microphone-alt"></i> <!-- Новая иконка -->
+                        </div>
+                        <h3>Подкасты и Аудиолекции</h3>
+                        <p>Слушайте увлекательные истории, аналитические обзоры и биографии от ведущих историков.</p>
+                        <a href="#" class="resource-link">Слушать подкасты</a>
+                    </div>
+                    <div class="resource-item">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-graduation-cap"></i> <!-- Новая иконка -->
+                        </div>
+                        <h3>Образовательные Курсы</h3>
+                        <p>Пройдите онлайн-курсы от мировых университетов, посвященные истории, литературе и культуре.</p>
+                        <a href="#" class="resource-link">Найти курсы</a>
+                    </div>
+                    <div class="resource-item">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-gavel"></i> <!-- Новая иконка -->
+                        </div>
+                        <h3>Юридические и Политические Документы</h3>
+                        <p>Ознакомьтесь с ключевыми законами, парламентскими актами и политическими манифестами эпохи.</p>
+                        <a href="#" class="resource-link">Читать документы</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "Контакты" -->
+        <section id="contact">
+            <div class="container text-center">
+                <h2 class="section-heading">Свяжитесь с Нами</h2>
+                <p>Есть вопросы, предложения или хотите поделиться своими исследованиями?</p>
+                <p>Мы всегда рады обратной связи от студентов, преподавателей и научных сотрудников.</p>
+
+                <!--  ФОРМА ОБРАТНОЙ СВЯЗИ -->
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Ваше имя:</label>
+                        <input type="text" id="contact-name" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Ваш Email:</label>
+                        <input type="email" id="contact-email" name="email" placeholder="@mail.ru" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Ваше сообщение:</label>
+                        <textarea id="contact-message" name="message" rows="5" placeholder="Введите ваше сообщение" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Отправить сообщение <i class="fas fa-paper-plane"></i></button>
+                    <p class="form-feedback" id="form-feedback"></p>
+                </form>
+
+                <p style="margin-top: 40px;">Email: <a href="mailto:epoha@mail.ru">epoha@mail.ru</a></p>
+                <p>Телефон: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            </div>
+        </section>
     </main>
-    <footer class="footer container">
-        <p class="footer__item"><a class="footer__link"> Свяжитесь с нами:</p>
-        <p class="footer__item"><a class="footer__link"> </a> Чат с поддержкой:</p>
-        <p class="footer__item"><a class="footer__link"> </a>&copy; 2025 История Викторианской Англии </p>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Викторианская Эпоха. Все права защищены.</p>
+            <p>Сайт создан для студентов, преподавателей и научных сотрудников.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <!-- HTML-структура модального окна для тем -->
+    <div id="topic-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn">&times;</button>
+            <h2 id="modal-title"></h2>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+
+    <!-- HTML-структура модального окна для галереи (лайтбокс) -->
+    <div id="lightbox-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn">&times;</button>
+            <img id="lightbox-image" src="" alt="Галерея Викторианской Эпохи">
+            <div class="caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- HTML-структура модального окна для фигур -->
+    <div id="figure-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn">&times;</button>
+            <h2 id="figure-modal-title"></h2>
+            <div id="figure-modal-text"></div>
+        </div>
+    </div>
+
+        <!-- CDN ссылки на библиотеки (перед вашим JS-файлом) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Swiper JS (ОБЯЗАТЕЛЬНО ДО ВАШЕГО SCRIPT.JS) -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Ссылка на ваш отдельный JS файл -->
     <script src="scripts/script.js"></script>
 </body>
-
 </html>
+
+    
